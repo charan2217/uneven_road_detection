@@ -1,73 +1,80 @@
-# Uneven Road Detection
+# 🚗 Uneven Road Detection System
 
-## Overview
-This project aims to detect uneven roads, potholes, and major/minor cracks using a combination of **LiDAR**, **Ultrasonic Sensors**, and **Infrared Cameras**. The system processes real-time data and predicts road conditions using **Deep Learning** and **Machine Learning** models.
+> Real-time road hazard detection using Sensor Fusion + Deep Learning  
+> Built by [Parava Charan Reddy](mailto:paravacharanreddy4@gmail.com) | [LinkedIn](https://linkedin.com/in/charan-parava-b4b164232) | [GitHub](https://github.com/charan2217)
 
-## Technologies Used
-- **Python** (for data processing and ML model development)
-- **TensorFlow/Keras** (for deep learning models)
-- **OpenCV** (for image processing and analysis)
-- **Pandas & NumPy** (for data manipulation)
-- **Matplotlib & Seaborn** (for data visualization)
-- **Scikit-learn** (for machine learning models)
-- **Arduino/C++** (for sensor integration and real-time data collection)
-- **RPLIDAR A2** (for LiDAR-based road scanning)
-- **HC-SR04** (for ultrasonic sensor-based depth measurement)
-- **Infrared Sensors** (for detecting fine cracks and texture variations)
-- **YOLOv8** (for object detection and road condition classification)
+---
 
-## Project Structure
-```
-├── data/
-│   ├── combined_sensor_data_cleaned.csv
-│   ├── synthetic_infrared_data.csv
-│   ├── synthetic_lidar_data.csv
-│   ├── synthetic_ultrasonic_data.csv
-├── models/
-│   ├── model.sav
-│   ├── train_lstm.py
-│   ├── train_yolov8.py
-├── scripts/
-│   ├── HC-SR04.py
-│   ├── RPLIDAR_A2_LiDAR.py
-│   ├── road_detection.py
-│   ├── road_detection1.py
-│   ├── python_lstm_road_detection_sim.py
-├── LICENSE
-├── README.md
-```
+## 📌 Project Overview
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/charan2217/uneven_road_detection.git
-   cd uneven_road_detection
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the detection script:
-   ```bash
-   python road_detection.py
-   ```
+AI-powered system to detect **potholes, cracks, bumps**, and **surface anomalies** using:
 
-## Model Training
-To train the LSTM model for road condition prediction:
+- 🔄 Sensor Fusion (LiDAR + Ultrasonic + Infrared)
+- 🧠 YOLOv8 + LSTM for real-time detection
+- 📍 Extended Kalman Filter (EKF) for location/velocity tracking
+- 🖥️ Visual Simulation + Alert system
+
+This project bridges robotics, computer vision, and real-world embedded sensing — ideal for automotive AI and SLAM-based navigation.
+
+---
+
+## 🧠 Features
+
+- ✅ Fuses 3 sensor streams to detect uneven roads
+- ✅ Object detection via **YOLOv8**
+- ✅ Route learning using **LSTM**
+- ✅ Position estimation with **IMU + EKF**
+- ✅ Real-time road warnings (console / GUI alerts)
+- ✅ Extendable to **cloud hazard sharing networks**
+
+---
+
+## 🔧 Tech Stack
+
+| Category       | Tools/Technologies |
+|----------------|--------------------|
+| Languages      | Python, Arduino (C++) |
+| Libraries      | OpenCV, TensorFlow, Keras, Scikit-learn |
+| Models         | YOLOv8, LSTM, EKF |
+| Sensors        | RPLIDAR A2, HC-SR04, IR sensors |
+| Visualization  | Matplotlib, Seaborn |
+| Tools          | Git, GitHub |
+
+---
+
+## 🗂️ Project Structure
+
+
+---
+
+## ⚙️ Run Instructions
+
 ```bash
-python train_lstm.py
-```
+# 1. Clone the repo
+git clone https://github.com/charan2217/uneven_road_detection.git
+cd uneven_road_detection
 
-To train the YOLOv8 model for object detection:
-```bash
-python train_yolov8.py
-```
+# 2. Install dependencies
+pip install -r requirements.txt
 
-## Contributors
-- **Charan Parava Reddy**
+# 3. Run detection
+python road_detection.py
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+# Optional: Run model training
+python train_lstm.py         # LSTM
+python train_yolov8.py       # YOLOv8
 
-## Contact
-For any queries, contact [paravacharanreddy4@gmail.com](mailto:paravacharanreddy4@gmail.com).
+
+
+| Sensor     | Role                              |
+| ---------- | --------------------------------- |
+| LiDAR      | Detect surface depth variation    |
+| Ultrasonic | Spot potholes & minor elevations  |
+| Infrared   | Detect cracks or reflectance dips |
+
+
+
+👨‍💻 About Me
+Parava Charan Reddy
+📧 paravacharanreddy4@gmail.com
+🌐 GitHub • LinkedIn
